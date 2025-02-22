@@ -1,0 +1,53 @@
+mavie.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algo diferente y único para la princesita de mi corazón</title>
+    <style>
+        body { text-align: center; font-family: Calibri, sans-serif; background-color: #ffe4e1; }
+        .hidden { display: none; }
+        .game-container { margin-top: 50px; }
+        button { padding: 10px 20px; font-size: 16px; margin: 10px; cursor: pointer; border: none; border-radius: 5px; background-color: #40E0D0; color: white; }
+        .final-message { font-size: 24px; font-weight: bold; margin-top: 20px; color: #d63384; }
+        img { width: 250px; margin: 20px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Algo diferente y único para la princesita de mi corazón ❤️</h1>
+    <img src="mavie1.jpeg" width="350px"
+    <div class="game-container">
+        <p>¿Cuánto te adoro?</p>
+        <button onclick="wrongAnswer()">Mucho</button>
+        <button onclick="wrongAnswer()">Millón</button>
+        <button onclick="nextQuestion()">Eternamente</button>
+    </div>
+    
+    <div class="game-container hidden" id="question2">
+        <img src="mavie2.jpeg" width="350px"
+        <p>¿Cuánto deseo estar a tú lado?</p>
+        <button onclick="wrongAnswer()">Para siempre</button>
+        <button onclick="wrongAnswer()">Cada día</button>
+        <button onclick="showFinalMessage()">Por el resto de esta vida y todas las que hayan por delante</button>
+    </div>
+    
+    <p id="finalMessage" class="hidden final-message">Esto es algo sencillo que he podido hacer pero con muchísimo amor e ingenio de algo único que podremos disfrutar y recordar entre risas para el gran álbum que estoy creando de nosotros, una vida juntos 💖</p>
+    
+    <script>
+        function nextQuestion() {
+            document.querySelector('.game-container').classList.add('hidden');
+            document.getElementById('question2').classList.remove('hidden');
+        }
+        
+        function wrongAnswer() {
+            alert("Ñomñomñom, esa no es la repuesta, podría ser pero hay una mejor");
+        }
+        
+        function showFinalMessage() {
+            document.getElementById('question2').classList.add('hidden');
+            document.getElementById('finalMessage').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
